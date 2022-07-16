@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alfashop - ADM</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
+        <!-- Bootstrap core CSS -->
+        <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+         <script  src="./assets/js/backend_adm.js"></script>
+    </head>
+    <body onload="verificaAcesso();detalheCat(document.f1)">
+        
+        <header class="container navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+            <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3" href="#">Aflashop ADM</a>
+            <div class="text-white">
+            
+            </div>
+            <div class="navbar-nav">
+              <div class="nav-item text-nowrap">
+                  <a class="nav-link px-3" href="javascript:;" onclick="logout();">Logout</a>
+              </div>
+            </div>
+        </header>
+        
+        
+          <div class="container">
+            <div class="row">
+              <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+
+                  <ul class="nav flex-column">
+                    <li class="nav-item">
+                      <a class="nav-link active" aria-current="page" href="dashboard.jsp">
+                        <span data-feather="home"></span>
+                        Dashboard
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="categorias.html">
+                        <span data-feather="file"></span>
+                        Gerenciar Categorias
+                      </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="produtos.html">
+                        <span data-feather="shopping-cart"></span>
+                        Gerenciar Produtos
+                      </a>
+                    </li>
+                  </ul>
+
+                </div>
+                </nav>
+
+              <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                 <div>
+                      <p id="msg"></p>
+                  </div>
+                  <div class="btn-toolbar mb-2 mb-md-0">
+                    <div class="btn-group me-2">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                    </div>
+                  </div>
+                </div>                
+                  <div>
+                      <p id="msg"></p>
+                  </div>
+                  <form name="f1" method="post" onsubmit="return false">
+                      
+                         <div class="row mb-3">
+                              <label for="inputEmail3" class="col-sm-2 col-form-label">Id</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" name="id">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="inputEmail3" class="col-sm-2 col-form-label">Nome</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" name="nome">
+                              </div>
+                            </div>
+                            <div class="row mb-3">
+                              <label for="inputPassword3" class="col-sm-2 col-form-label">Descricao</label>
+                              <div class="col-sm-10">
+                                  <input type="text" class="form-control" name="desc">
+                              </div>
+                            </div>
+                                 
+                      
+                           <div class="row mb-3">
+                              <label for="inputPassword3" class="col-sm-2 col-form-label">Ativo(s/n)</label>
+                              <div class="col-sm-10">
+                                  <input type="text"  name="atv" value="">  <br>
+                                 
+                              </div>
+                            </div>
+                         
+                          
+                    <button type="button" value="cadastrar" class="btn btn-primary" onclick="updateCat(this.form);">Cadastrar</button>
+                         
+                  </form>
+                  
+              </main>
+              
+            </div>
+        </div>
+        
+    </body>
+</html>

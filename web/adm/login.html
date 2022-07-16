@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Alfashop - Acesso Restrito</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../web/assets/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!--  Custom styles for this template -->
+    <link href="../web/assets/css/login.css" rel="stylesheet">
+    <script  src="./assets/js/backend_adm.js"></script>
+  </head>
+  <body class="text-center">
+    
+<main class="form-signin">
+    <form  method="post" id="login" onsubmit="return false">
+      <img class="mb-4" src="../web/assets/img/logo.png" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Acesso Restrito</h1>
+
+    <div class="form-floating">
+        <input type="email" class="form-control"  placeholder="name@example.com" name="ema" id="ema">
+      <label for="floatingInput">Email</label>
+    </div>
+    <div class="form-floating">
+        <input type="password" class="form-control"  placeholder="senhaacesso" name="sen" id="sen">
+      <label for="floatingPassword">Senha</label>
+    </div>
+
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Lembrar login
+      </label>
+    </div>
+    <button class="w-100 btn btn-lg btn-primary" type="button" id="btn" onclick="login();">Login</button>
+   
+    <p class="mt-5 mb-3 text-muted">&copy; Alfashop</p>
+  </form>
+</main>
+
+
+    
+  </body>
+</html>

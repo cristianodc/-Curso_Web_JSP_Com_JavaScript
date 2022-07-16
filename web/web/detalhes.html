@@ -1,0 +1,140 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>Alfashop</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Custom styles for this template -->
+  <link href="./assets/css/style.css" rel="stylesheet">
+  <script src="./assets/js/backend.js"></script>
+</head>
+
+<body onload="listCategorias('cat'),detalhesProd('prod')">
+
+<main>
+
+  <nav class="navbar navbar-expand-md ">
+    <div class="container">
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Alfashop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="./">Destaques</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Perguntas Frequentes</a>
+          </li>
+        </ul>
+        <form class="d-flex" action="produtos.jsp">
+            <input class="form-control me-2" type="search" placeholder="Pesquisar por nome" name="q">
+          <button class="btn btn-outline-primary" type="submit">Pesquisar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://picsum.photos/1200/300?grayscale&random=1">
+        <div class="container">
+          <div class="carousel-caption text-start">
+            <h1>Example headline.</h1>
+            <p>Some representative placeholder content for the first slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://picsum.photos/1200/300?grayscale&random=2">
+        <div class="container">
+          <div class="carousel-caption">
+            <h1>Another example headline.</h1>
+            <p>Some representative placeholder content for the second slide of the carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <img src="https://picsum.photos/1200/300?grayscale&random=3">
+        <div class="container">
+          <div class="carousel-caption text-end">
+            <h1>One more for good measure.</h1>
+            <p>Some representative placeholder content for the third slide of this carousel.</p>
+            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container">
+      <div class="collapse navbar-collapse">
+          <ul id="cat" class="navbar-nav">
+              <!--
+                CARREGAMENTO AQUI
+              -->
+         
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <div class="container px-4 py-4" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Detalhes do Produto</h2>
+    
+        <div id="prod" class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <div class="col">
+               <div class="card mb-4 rounded-3 shadow-sm">
+                 <div class="card-header py-3">
+                   <h4 class="my-0 fw-normal">${linha.nome}</h4>
+                 </div>
+                 <div class="card-body">
+                   <h1 class="card-title pricing-card-title">${linha.valor}<small class="text-muted fw-light">/mês</small></h1>
+                   <p>
+                       ${linha.resumo}
+                   </p>
+                    <a href="detalhes.jsp?idc=${linha.id}" class="w-100 btn btn-lg btn-outline-primary">Sign up for free</a>
+                 </div>
+               </div>
+
+             </div>
+            
+       </div>
+    
+     <footer class="container">
+    <p class="float-end"><a href="#">Voltar ao Topo</a></p>
+    <p>&copy; 2021 Company, Inc. &middot; <a href="#">LGPD</a> &middot; <a href="#">Termos de Uso</a></p>
+  </footer>
+    
+    </main>
+
+<script src="./assets/js/bootstrap.bundle.min.js"></script>   
+</body>
+</html>
